@@ -42,13 +42,13 @@
     height: 100%;
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .header-notification {
         font-size: 20px;
         line-height: 20px;
         padding: 13px 0 0;
     }
-}
+} */
 
 .header-notification {
     position: sticky;
@@ -62,6 +62,14 @@
     padding: 11px 0 0;
     text-align: center;
 }
+
+/* .headerwrap {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+} */
 
 .header-main {
     padding: 19px 0;
@@ -100,17 +108,16 @@ li {
     list-style: none;
 }
 
-  /* .icon {
-    width: 12px;
-    height: 15px;
-    margin-right: 5px;
-} */
+ 
 
 a {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     transition: color 0.3s;
+}
+.lazyloaded{
+    color:#02ACD4 ;
 }
 
 img {
@@ -133,10 +140,91 @@ img {
     color: #191919 !important;
 }
 
+
+
+.holder{
+   border-left: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-menu-container{
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 550px;
+}
+
+ li {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000101;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+}
+
+
+/* 
 .button {
     padding-right: 0;
     border-radius: 3px 0 0 3px;
     border: 1px solid #fff;
     border-width: 1px 0 1px 1px;
     transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+} */
+
+.header-buttons{
+    display: block;
+    margin-top: auto;
+    gap: 12px;
+    width: 300px;
+
+}
+
+.header-buttons .button span {
+    font: 18px / 20px "acumin-pro-condensed-bold", "Arial", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    padding: 7px 20px;  
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+   margin: 0 auto 4px;
+    
+} 
+
+.button > span {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 11px 20px;
+    height: 100%;
+}
+.header-buttons .bordered span  {
+    color: #090909 ;
+    background-color: #b9d5f1;
+}
+.header-buttons  .medium span  {
+    color: #fdfafa ;
+    background-color: #01060b;
+}
+.button{
+    
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0% 100%);
+}
+
+.header-buttons span {
+    padding-right: 10px;
+    padding: 7px 15px;
+    border: 1px solid #fff;
+    border-width: 1px 0 1px 1px;
+    /* background-color: var( --bs-gray-dark); */
+  
 }
