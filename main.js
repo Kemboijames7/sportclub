@@ -18,3 +18,30 @@ ScrollReveal().reveal(".icon", {
     ...scrollRevealOption,
     interval: 500,
   });
+
+
+  
+  function initMap() {
+    const mapOptions = {
+      zoom: 8,
+      center: { lat: -1.2921, lng: 36.8219 } // Coordinates of Nairobi, Kenya
+    };
+
+    const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+
+    const marker = new google.maps.Marker({
+      position: { lat: -1.286389, lng: 36.817223 }, // Custom marker position
+      map: map,
+      title: "Custom Location"
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: "<h4>Nairobi</h4><p>The capital city of Kenya.</p>"
+    });
+
+    marker.addListener("click", function() {
+      infoWindow.open(map, marker);
+    });
+  }
+ 

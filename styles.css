@@ -338,23 +338,40 @@ img {
 .map-section:first-child {
     padding-top: 40px;
 }
-.container-spacing {
+/* .container-spacing {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 
-}
+} */
 
-.wrapper .jcf-scrollable {
-    width: 100%;
+.map-section  .wrapper .jcf-scrollable {
+    width: 50%;
 }
 
 .map-section .inner {
-    position: relative;
+    display: flex;
+    justify-content: space-evenly;
     border-radius: 2px 0 0 2px;
     border: 1px solid #e8e8e8;
     border-right: 0;
 }
+
+/* .map-holder {
+    margin: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 410px;
+    height: auto;
+} */
+
+#map  {
+    height: 500px;
+    width: 60%;
+  }
+
 
 .search-locations-title, .h5 {
     font-size: 32px;
@@ -399,4 +416,19 @@ address {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 0px;
+}
+
+.section-heading {
+    margin-left: 110px;
+}
+
+h2.color-red {
+    color:red;
+    font-weight: 600;
+    font-size: 64px !important;
+    line-height: 54px !important;
+}
+
+.section-heading.align-right .h2.split-text {
+    margin-right: -10px;
 }
