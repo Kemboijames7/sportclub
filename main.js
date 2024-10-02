@@ -44,4 +44,28 @@ ScrollReveal().reveal(".icon", {
       infoWindow.open(map, marker);
     });
   }
+
+  const sections = document.querySelectorAll('.menu-menu-container li a'); 
+const navLinks = document.querySelectorAll('.photo-holder'); 
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    // Use window.scrollY instead of pageYOffset
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
  
