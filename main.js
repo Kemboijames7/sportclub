@@ -69,3 +69,46 @@ window.addEventListener('scroll', () => {
   });
 });
  
+ 
+  const commentForm = document.getElementById('commentForm');
+  const commentsSection = document.getElementById('commentsSection');
+  const savedComments = JSON.parse(localStorage.getItem('comments')) || [];
+
+  // Load saved comments from localStorage
+  function loadComments() {
+    commentsSection.innerHTML = '<h3>Comments:</h3>';
+    savedComments.forEach(comment => {
+      const commentElement = document.createElement('p');
+      commentElement.innerText = comment;
+      commentsSection.appendChild(commentElement);
+    });
+  }
+
+  // Save comments to localStorage
+  function saveComments() {
+    localStorage.setItem('comments', JSON.stringify(savedComments));
+  }
+
+  // Handle form submission
+  commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const commentText = document.getElementById('commentText').value;
+    
+    if (commentText.trim()) {
+      // Add the comment to the saved comments array
+      savedComments.push(commentText);
+      saveComments();
+
+      // Add the new comment to the UI
+      const newComment = document.createElement('p');
+      newComment.innerText = commentText;
+      commentsSection.appendChild(newComment);
+      
+      // Clear the form
+      commentForm.reset();
+    }
+  });
+
+  // Initialize
+  loadComments();
+ 
