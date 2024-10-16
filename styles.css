@@ -310,7 +310,7 @@ img {
     transition:  ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.hero-section .photo .photo-holder video {
+.hero-section .photo #photo-holder video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -327,7 +327,7 @@ img {
    
 }
 
-.hero-section .photo .photo-holder video {
+.hero-section .photo #photo-holder video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -514,17 +514,23 @@ svg {
     display: none;
 }
 
-.wrap {
+/* .wrap {
     position: relative;
     z-index: 5;
-}
+} */
 
 
-.photo-holder {
+#photo-holder {
     padding: 10px;
     display: flex;
     text-align: center;
      height: 357px;
+}
+
+
+.img-holder a {
+    position: absolute;
+    left: 70px;
 }
 
 .img-holder img {
@@ -533,7 +539,8 @@ svg {
     object-fit: cover;
 }
 
-.photo-holder .mask {
+
+/* #photo-holder .mask {
     position: absolute;
     left: 50%;
     top: 0;
@@ -541,15 +548,15 @@ svg {
     height: 100%;
     background-color: transparent;
     z-index: 5;
-    /* transform: translateX(-50%); */
+    transform: translateX(-50%);
     transition: background-color 0.5s, width 0.5s;
     pointer-events: none;
-}
-.no-touch .classes-slider .photo-holder > a {
+} */
+.no-touch .classes-slider #photo-holder > a {
     display: none;
 }
 
-.photo-holder > a {
+/* #photo-holder > a {
     text-decoration: none !important;
     position: absolute;
     left: 0;
@@ -562,24 +569,24 @@ svg {
     align-items: center;
     transition: color 0.3s;
     display: none;
+} */
+
+#photo-holder:hover .img-holder {
+    width: 50%;
+    clip-path: polygon(13.8% 0%, 100% 0%, 86.4% 100%, 0% 100%);
 }
 
-.photo-holder:hover .img-holder {
-    width: 60%;
-    /* clip-path: polygon(13.8% 0%, 100% 0%, 86.4% 100%, 0% 100%); */
-}
-
-.photo-holder .img-holder {
+#photo-holder .img-holder {
     left: 50%;
-    /* transform: translateX(-50%); */
+    transform: translateX(-20%);
     transition: width 0.5s;
     will-change: width;
 }
 
-.slick-list .wrap {
+/* .slick-list .wrap {
     position: relative;
     z-index: 5;
-}
+} */
 
 .has-animation.animate .scaleImg img {
    
@@ -590,12 +597,11 @@ svg {
 
 .slide .wrap h5 {
     margin: 0 0 10px;
-    color: #fff !important;
     text-transform: uppercase;
     display: block;
     font: 28px / 28px "acumin-pro-condensed-bold", "Arial", "Helvetica", sans-serif;
-    font-size: 40px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 26px;
 }
 
 /* opacity: 1;
@@ -604,8 +610,11 @@ height: 374px;
 transform: translate3d(0px, 0px, 0px); */
 
  
-  #commentForm {
+  /* #commentForm {
     margin-bottom: 20px;
+  } */
+  #commentForm{
+margin-top: 50px;
   }
 
   #commentText {
